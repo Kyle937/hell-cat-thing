@@ -1,15 +1,13 @@
 class HellCat:
 
-    def __init__(self, name, color, eyeColor):
+    def __init__(self, color, eyeColor):
         # initalizing
-        if name.strip().isalpha():
-            self.__name__ = name.strip()
 
         if color.strip().isalpha():
-            self.color = color.strip()
+            self.__color__ = color.strip()
 
         if eyeColor.strip().isalpha():
-            self.eyeColor = eyeColor.strip()
+            self.__eyeColor__ = eyeColor.strip()
 
         self.__wearing__ = True
 
@@ -35,9 +33,9 @@ class HellCat:
     def dye(self,new):
         # changing color
         if new.strip().isalpha():
-            self.color = new.strip()
-            print("badge color changed to", self.color)
+            self.__color__ = new.strip()
+            print("badge color changed to", self.__color__)
 
 
-bob = HellCat("bob",input("body color: "), input("eye color: "))
-bob.dye(input("new body color: "))
+bob = HellCat(input("body color: "), input("eye color: "))
+bob.dye(input("dye color: "))
