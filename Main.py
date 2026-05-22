@@ -5,9 +5,13 @@ class HellCat:
 
         if color.strip().isalpha():
             self.__color = color.strip()
+        else:
+            self.__color = "red"
 
         if eyeColor.strip().isalpha():
             self.__eyeColor = eyeColor.strip()
+        else:
+            self.__eyeColor = "black"
 
         self.__wearing = True
 
@@ -30,11 +34,11 @@ class HellCat:
         return self.__wearing
     
 
-    def checkEye(self):
+    def checkEyeColor(self):
         return self.__eyeColor
 
 
-    def dye(self,new):
+    def setBodyColor(self,new):
         # changing color
         if new.strip().isalpha():
             self.__color = new.strip()
@@ -42,4 +46,4 @@ class HellCat:
 
 
 bob = HellCat(input("body color: "), input("eye color: "))
-bob.dye(input("dye color: "))
+bob.setBodyColor(input("dye color: "))
